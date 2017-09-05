@@ -21,7 +21,7 @@ ext.junitPlatformVersion = '1.0.0-RC3'
 ext.junitJupiterVersion  = '5.0.0-RC3'
 
 allprojects {
-    group = "org.auxis"
+    group = "org.rebaze.confidence"
     if (version == "unspecified") {
         version "999-SNAPSHOT"
     }
@@ -76,9 +76,9 @@ subprojects { subproject ->
                 repo = 'rebaze-oss'
                 user = 'tonit'
                 userOrg = 'rebaze'
-                name = "auxis"
+                name = "confidence"
                 licenses = ['Apache-2.0']
-                labels = ['shipkit']
+                labels = ['testing']
             }
         }
     }

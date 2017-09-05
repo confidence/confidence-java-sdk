@@ -1,4 +1,4 @@
-rootProject.name = "auxis"
+rootProject.name = "confidence"
 
 include 'auxis-java-runner'
 include 'auxis-jupiter-inject'

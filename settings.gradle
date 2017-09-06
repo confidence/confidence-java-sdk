@@ -1,7 +1,7 @@
 rootProject.name = "confidence"
 
-include 'auxis-java-runner'
-include 'auxis-jupiter-inject'
+include 'confidence-java-runner'
+include 'confidence-jupiter-inject'
 
 //include 'indexer-core'
 //include "indexer-git"

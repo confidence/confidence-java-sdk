@@ -1,0 +1,3 @@
+Export-Package: org.rebaze.confidence.jupiter.injector
+
+Bundle-SymbolicName: org.rebaze.confidence.jupiter.inject

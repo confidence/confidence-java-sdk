@@ -2,7 +2,10 @@ package org.rebaze.confidence.jupiter.inject;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.rebaze.confidence.jrunner.ApplicationClient;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(JavaRunnerExtension.class)
 public class JavaRunnerTest {
@@ -21,8 +24,15 @@ public class JavaRunnerTest {
 
     }
 
+    @Mock Thing thing;
+
+
     @Test
     public void testLauncher2() {
+        assertNotNull(thing);
+    }
+
+    class Thing {
 
     }
 }

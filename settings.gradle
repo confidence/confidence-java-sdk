@@ -2,6 +2,10 @@ rootProject.name = "confidence"
 
 include 'confidence-java-runner'
 include 'confidence-jupiter-inject'
+include 'undertest-core'
+include 'undertest-jupiter-extras'
+include 'undertest-junit-api'
+include 'undertest-junit-engine'
 
 //include 'indexer-core'
 //include "indexer-git"

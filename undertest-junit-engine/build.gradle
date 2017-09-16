@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0'
+    }
+}
+
+compileTestJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    options.compilerArgs += '-parameters'
+}
+
+dependencies {
+    compile project(':undertest-junit-api')
+
+    compile 'org.ops4j.base:ops4j-base-io:1.5.0'
+    compile 'org.projectlombok:lombok:1.16.18'
+
+    compile 'org.slf4j:slf4j-api:1.5.11'
+    compile "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+
+    compile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+
+    testCompile 'ch.qos.logback:logback-classic:0.9.20'
+    testCompile 'ch.qos.logback:logback-core:0.9.20'
+
+    // Needed for @RunWith(JUnitPlatform.class) in the IDE
+    //testCompile "org.junit.platform:junit-platform-runner:${junitPlatformVersion}"
+
+
+    // Only needed to run tests in an IDE that bundles an older version
+    //testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+}

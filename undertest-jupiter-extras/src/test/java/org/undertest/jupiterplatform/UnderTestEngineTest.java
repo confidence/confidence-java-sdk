@@ -1,4 +1,4 @@
-package org.undertest.junit.engine;
+package org.undertest.jupiterplatform;
 
 import org.junit.jupiter.api.Test;
 

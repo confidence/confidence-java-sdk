@@ -3,6 +3,7 @@ rootProject.name = "confidence"
 include 'confidence-java-runner'
 include 'confidence-jupiter-inject'
 include 'undertest-core'
+include 'undertest-jupiter-api'
 include 'undertest-jupiter-extras'
 include 'undertest-junit-api'
 include 'undertest-junit-engine'

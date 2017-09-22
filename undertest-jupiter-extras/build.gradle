@@ -23,11 +23,34 @@ dependencies {
     testCompile 'ch.qos.logback:logback-classic:0.9.20'
     testCompile 'ch.qos.logback:logback-core:0.9.20'
 
+    testRuntime project(':undertest-junit-engine')
+
+
     // Needed for @RunWith(JUnitPlatform.class) in the IDE
     //testCompile "org.junit.platform:junit-platform-runner:${junitPlatformVersion}"
 
-    testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+   // testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}
 
     // Only needed to run tests in an IDE that bundles an older version
     //testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+}
+
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+junitPlatform {
+    // platformVersion '1.0.0'
+    filters {
+        engines {
+             include 'org.undertest.junit.engine'
+            // exclude 'custom-engine'
+        }
+        tags {
+            // include 'fast'
+            exclude 'slow'
+        }
+        // includeClassNamePattern '.*Test'
+    }
+    // configurationParameter 'junit.jupiter.conditions.deactivate', '*'
+    // enableStandardTestTask true
+    // reportsDir file('build/test-results/junit-platform') // this is the default
 }

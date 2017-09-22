@@ -20,6 +20,7 @@ apply from: "gradle/ide.gradle"
 ext.junitPlatformVersion = '1.0.0'
 ext.junitJupiterVersion  = '5.0.0'
 
+
 allprojects {
     group = "org.rebaze.confidence"
     if (version == "unspecified") {

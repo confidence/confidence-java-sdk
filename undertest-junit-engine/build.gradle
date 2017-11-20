@@ -20,7 +20,7 @@ dependencies {
     compile 'org.projectlombok:lombok:1.16.18'
 
     compile 'org.slf4j:slf4j-api:1.5.11'
-    compileOnly  "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    implementation  "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
 
     compile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
 
